@@ -1,9 +1,8 @@
 package com.example.gathergrid.domains;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
+
+import java.util.List;
 
 @Entity
 public class User {
@@ -15,9 +14,14 @@ public class User {
     private String firstName;
     @Column(name = "last_name")
     private String lastName;
+    private String email;
 
-    public User(String username, String password, String firstName, String lastName) {
-        this.username = username;
+    @ManyToMany
+    private List<Event> events;
+    public User() {}
+    public User(String firstName, String lastName,String email, String password ) {
+        this.username = firstName + lastName;
+        this.email = email;
         this.password = password;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -61,5 +65,13 @@ public class User {
 
     public void setLastName(String lastName) {
         this.lastName = lastName;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 }
