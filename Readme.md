@@ -50,22 +50,6 @@ https://tomcat.apache.org/download-10.cgi#10.1.14
         -> JDK 11.
         -> hit next .
     Time to chose implementations and specefications ( listed below in maven section )
-
-### Configuration :
-    * extract the files on the correct destination based on operation system
-    * navigate to '/tomcat/conf'
-    * open and add some users:
-
-```xml
-    <role rolename="manager-gui"/>
-    <user username="manager" password="manager" roles="manager-gui"/>
-    
-    <role rolename="admin-gui"/>
-    <user username="admin" password="admin" roles="manager-gui,admin-gui"/>
-```
-### Execution
-    * navigate to '/tomcat/bin'
-    * run the startup.sh command file
 </details>
 
 <details>
