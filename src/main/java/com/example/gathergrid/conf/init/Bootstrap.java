@@ -11,6 +11,5 @@ public class Bootstrap {
             EntityManagerFactory emf = Persistence.createEntityManagerFactory("default");
             emf.close();
         }catch (Exception ignore){}
-
     }
 }

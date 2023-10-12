@@ -9,5 +9,4 @@ public class UserDAO {
     @PersistenceContext
     private EntityManager entityManager;
 
-
 }
